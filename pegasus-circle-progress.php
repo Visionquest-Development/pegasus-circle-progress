@@ -18,7 +18,7 @@ Domain Path: /languages
 		exit;
 	}
 	function pegasus_circle_progress_menu_item() {
-		add_menu_page("Circle Progress", "Circle Progress", "manage_options", "pegasus_circle_progress_plugin_options", "pegasus_circle_progress_plugin_settings_page", null, 99);
+		//add_menu_page("Circle Progress", "Circle Progress", "manage_options", "pegasus_circle_progress_plugin_options", "pegasus_circle_progress_plugin_settings_page", null, 99);
 		
 	}
 	add_action("admin_menu", "pegasus_circle_progress_menu_item");
