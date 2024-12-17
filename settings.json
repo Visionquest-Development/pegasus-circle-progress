@@ -1,0 +1,16 @@
+{
+  "rows": [
+    {
+      "section_name": "Circle Progress Settings",
+      "rows": [
+        {
+          "name": "Number",
+          "attribute": "number",
+          "options": "Any Number",
+          "description": "The number to display after animation",
+          "example": "number=\"90\""
+        }
+      ]
+    }
+  ]
+}
