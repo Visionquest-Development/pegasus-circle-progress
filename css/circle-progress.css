@@ -21,20 +21,20 @@
 	    width: 122px;
 		height: 122px;
 		content: "";
-		border: 2px solid #fb4f14;
+		/* border: 2px solid #fb4f14; */
 		border-radius: 50%;
 		display: block;
 		position: absolute;
 		top: 30px;
 		left: 31px;
 	}
-	
+
 	.circle canvas {
 		vertical-align: middle;
-		border: 2px solid #fb4f14;
+		/* border: 2px solid transparent; */
 		border-radius: 50%;
 	}
-	
+
 	.circle div {
 		position: absolute;
 		top: 50%;
@@ -44,7 +44,7 @@
 		text-align: center;
 		line-height: 40px;
 		font-size: 31px;
-		
+
 	}
 	.circle strong i {
 		font-style: normal;

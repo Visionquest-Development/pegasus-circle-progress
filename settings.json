@@ -9,6 +9,13 @@
           "options": "Any Number",
           "description": "The number to display after animation",
           "example": "number=\"90\""
+        },
+        {
+          "name": "Color",
+          "attribute": "color",
+          "options": "Any Hex Color Code",
+          "description": "The color to display in the circle, default is #3498db",
+          "example": "color=\"#3498db\""
         }
       ]
     }

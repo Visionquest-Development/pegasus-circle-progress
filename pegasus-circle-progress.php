@@ -208,7 +208,7 @@ Domain Path: /languages
 		//wp_enqueue_script( 'images-loaded-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/imagesLoaded.js', array( 'jquery' ), null, true );
 
 		wp_register_script( 'circle-progress-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/circle-progress.js', array( 'jquery' ), null, 'all' );
-		wp_register_script( 'pegasus-circle-progress-plugin-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/plugin.js', array( 'jquery' ), null, 'all' );
+		wp_register_script( 'pegasus-circle-progress-plugin-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/pegasus-circle-plugin.js', array( 'jquery' ), null, 'all' );
 
 	} //end function
 	add_action( 'wp_enqueue_scripts', 'pegasus_circle_progress_plugin_js' );
@@ -222,9 +222,19 @@ Domain Path: /languages
 	function pegasus_circle_prog_func( $atts, $content = null ) {
 		$a = shortcode_atts( array(
 			'number' => '',
+			'color' => '',
 		), $atts );
 
-		$output = '<div class="progressbar" data-animate="false">';
+		if ( empty( $a['number'] ) ) {
+			return '<p style="color: red;">Error: You must provide a number attribute for the circle_progress shortcode to work.</p>';
+		}
+		if ( empty( $a['color'] ) ) {
+			$a['color'] = '#3498db';
+		}
+
+		$output = '';
+
+		$output .= '<div class="progressbar" data-animate="false" data-color="' . $a['color'] . '">';
 			$output .= "<div class='circle' data-percent='{$a['number']}'>";
 				$output .= "<div>{$a['number']}%</div>";
 			$output .= '</div>';
