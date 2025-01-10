@@ -5,7 +5,7 @@
 
 	.progressbar {
 		display: inline-block;
-		width: 100px;
+		/* width: 100px; */
 		margin: 25px;
 	}
 	.circle {

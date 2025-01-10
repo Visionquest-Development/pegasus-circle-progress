@@ -193,7 +193,7 @@ Domain Path: /languages
 	}
 
 	function pegasus_circle_progress_plugin_styles() {
-		wp_enqueue_style( 'circle_progress-css', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'css/circle_progress.css', array(), null, 'all' );
+		wp_enqueue_style( 'circle_progress-css', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'css/circle-progress.css', array(), null, 'all' );
 		//wp_enqueue_style( 'slippery-slider-css', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'css/slippery-slider.css', array(), null, 'all' );
 	}
 	add_action( 'wp_enqueue_scripts', 'pegasus_circle_progress_plugin_styles' );
