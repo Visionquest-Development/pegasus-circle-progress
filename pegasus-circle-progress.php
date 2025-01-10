@@ -193,7 +193,7 @@ Domain Path: /languages
 	}
 
 	function pegasus_circle_progress_plugin_styles() {
-		wp_enqueue_style( 'circle_progress-css', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'css/circle-progress.css', array(), null, 'all' );
+		wp_enqueue_style( 'circle-progress-css', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'css/circle-progress.css', array(), null, 'all' );
 		//wp_enqueue_style( 'slippery-slider-css', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'css/slippery-slider.css', array(), null, 'all' );
 	}
 	add_action( 'wp_enqueue_scripts', 'pegasus_circle_progress_plugin_styles' );
@@ -208,7 +208,7 @@ Domain Path: /languages
 		//wp_enqueue_script( 'images-loaded-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/imagesLoaded.js', array( 'jquery' ), null, true );
 
 		wp_register_script( 'circle-progress-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/circle-progress.js', array( 'jquery' ), null, 'all' );
-		wp_register_script( 'pegasus-circle-progress-plugin-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/pegasus-circle-plugin.js', array( 'jquery' ), null, 'all' );
+		wp_register_script( 'pegasus-circle-progress-plugin', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/pegasus-circle-plugin.js', array( 'jquery' ), null, 'all' );
 
 	} //end function
 	add_action( 'wp_enqueue_scripts', 'pegasus_circle_progress_plugin_js' );
@@ -241,7 +241,7 @@ Domain Path: /languages
 		$output .= '</div>';
 
 		wp_enqueue_script( 'circle-progress-js' );
-		wp_enqueue_script( 'pegasus-circle-progress-plugin-js' );
+		wp_enqueue_script( 'pegasus-circle-progress-plugin' );
 
 		return $output;
 	}
