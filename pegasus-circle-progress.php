@@ -207,8 +207,8 @@ Domain Path: /languages
 
 		//wp_enqueue_script( 'images-loaded-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/imagesLoaded.js', array( 'jquery' ), null, true );
 
-		wp_register_script( 'circle-progress-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/circle-progress.js', array( 'jquery' ), null, 'all' );
-		wp_register_script( 'pegasus-circle-progress-plugin', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/pegasus-circle-plugin.js', array( 'jquery' ), null, 'all' );
+		wp_register_script( 'circle-progress-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/circle-progress.js', array( 'jquery' ), '1.2.2', 'all' );
+		wp_register_script( 'pegasus-circle-progress-plugin', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/pegasus-circle-plugin.js', array( 'jquery', 'circle-progress-js' ), '1.0', 'all' );
 
 	} //end function
 	add_action( 'wp_enqueue_scripts', 'pegasus_circle_progress_plugin_js' );
